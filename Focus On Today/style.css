@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    background-color: #48A3001A;
+    margin: 0;
+}
+
+/* main{
+    /* padding: 0 16px; 
+} */
+
+.heading{
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: poppins;
+    color: #48A300;
+    text-align: center;
+    margin: 20px 0;
+}
+.heading span{
+    color: #61481C;
+}
+
+.container{
+    width: 650px;
+    min-height: 810px;
+    background: #FBFBFB;
+    border-radius: 15px;
+    padding: 2.5em;
+    inset: 0;
+    margin: auto;
+}
+
+.top{
+    display: flex;
+    gap: 13px;
+}
+.top-text{
+    font-size: 2.5em;
+    line-height: 48px;
+}
+.top span{
+    width: 10%;
+    position: relative;
+    cursor: pointer;
+}
+.face{
+    position: absolute;
+    left: 19px;
+    bottom: 24px;
+}
+.sun{
+    animation: rotateSun 3s infinite linear;
+}
+@keyframes rotateSun {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.bar-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.value{
+    color: #858585;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 15px;
+}
+#error-message{
+    color: red;
+    display: none;
+}
+
+.bar{
+    width: 100%;
+    height: 24px;
+    background: #48A3001A;
+    border-radius: 15px;
+}
+.progress-value{
+    width: 0;
+    height: 100%;
+    background: #48A300;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+.progress-value span{
+    padding-left: 22px;
+    min-width: max-content;
+    color: white;
+}
+
+.task{
+    width: 100%;
+    height: 80px;
+    background-color: #ffffff;
+    border-radius: 17px;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    /* gap: 30px; */
+    margin: 55px 0;
+}
+
+.task .checkbox{
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    border: 2px solid #61481C4D;
+    margin-left: 0.625em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* z-index: 999; */
+}
+.check-icon{
+    display: none;
+}
+
+
+.task .goal-input{
+    width: 100%;
+    align-self: stretch;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    font-size: 1.2em;
+    padding: 30px;
+    font-weight: 500;
+    /* color: #48A300; */
+}
+.task .goal-input::placeholder{
+    color: rgba(142, 142, 142, 0.584);
+}
+
+#motivation{
+    width: 100%;
+    text-align: center;
+    margin-top: 1.25em;
+    font-weight: 500;
+    position: relative;
+    margin: 30px 0;
+}
+#credit{
+    width: 100%;
+    text-align: center;
+    margin-top: 2.5em;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 15px;
+    color: #858585;
+    position: relative;
+    margin: 60px 0;
+}
+
+.completed .checkbox {
+    background: #48A300;
+    border-color: #48A300;
+}
+.completed .check-icon{
+    display: block;
+}
+.completed .goal-input{
+    color: #48A300;
+    text-decoration: line-through;
+}
+
+@media (width<655px) {
+    .container{
+        width: 550px;
+    }
+    .heading{
+        font-size: 2.7em;
+    }
+}
+
+@media (width<547px) {
+    .container{
+        width:420px;
+    }
+    .heading{
+        font-size: 2.5em;
+    }
+    .top h1{
+        font-size: 2em;
+    }
+    #motivation{
+        font-size: 14px;
+    }
+    .bar{
+        height: 20px;
+    }
+    input{
+        font-size: 1em;
+    }
+}
+
+@media (width<420px) {
+    .container{
+        width:320px;
+    }
+    .heading{
+        font-size: 2em;
+    }
+    .top h1{
+        font-size: 1.5em;
+    }
+    #motivation{
+        font-size: 12px;
+    }
+    .bar{
+        height: 20px;
+    }
+    input{
+        font-size: 1em;
+    }
+    .task .checkbox{
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+}
